@@ -1,0 +1,25 @@
+{
+  "name": "vocabulary-list-mongodb",
+  "version": "0.0.1",
+  "description": "It's basically an app that lets you store into mongodb",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfernando0911/vocabulary-list-mongodb.git"
+  },
+  "keywords": [
+    "vocabulary",
+    "list",
+    "mongodb",
+    "test"
+  ],
+  "author": "Fernando Aguilar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jfernando0911/vocabulary-list-mongodb/issues"
+  },
+  "homepage": "https://github.com/jfernando0911/vocabulary-list-mongodb#readme"
+}
