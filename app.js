@@ -5,15 +5,15 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// const mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost/newTest', {useNewUrlParser: true});
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/newTest', {useNewUrlParser: true});
 
-// let db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'connection error:'));
-// db.once('open', function() {
+let db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
   
-//   console.log("We are connected");
-// });
+  console.log("We are connected");
+});
 
 let VocabularySchema = new mongoose.Schema({ 
     VocabularyString: String          
