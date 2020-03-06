@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jfernando0911/vocabulary-list-mongodb.git"
+    "url": "https://github.com/jfernando0911/vocabulary-list-mongodb/"
   },
   "keywords": [
     "vocabulary",
@@ -21,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/jfernando0911/vocabulary-list-mongodb/issues"
   },
-  "homepage": "https://github.com/jfernando0911/vocabulary-list-mongodb#readme"
+  "homepage": "https://github.com/jfernando0911/vocabulary-list-mongodb#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.3",
+    "nodemon": "^2.0.2"
+  }
 }
