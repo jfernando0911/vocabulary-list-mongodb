@@ -22,6 +22,7 @@ let VocabularySchema = new mongoose.Schema({
 let vocabulary = mongoose.model("vocabulary", VocabularySchema);   
 
 app.set('view engine', 'html');
+app.use(express.static('public'));
 
 app.get("/", function(req, res){
     res.sendFile(__dirname+"/index.html");
