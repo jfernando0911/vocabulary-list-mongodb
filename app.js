@@ -21,22 +21,62 @@ let VocabularySchema = new mongoose.Schema({
 
 let vocabulary = mongoose.model("vocabulary", VocabularySchema);   
 
-app.set('view engine', 'html');
+
+app.set('views', './views');
+app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
+let query;
+
+vocabulary.find({}, function (err, word) {
+   
+    if (err) return handleError(err);
+    
+    query = word;
+   
+});
+
+
 app.get("/", function(req, res){
-    res.sendFile(__dirname+"/index.html");
+    console.log("Estamos en /");
+    vocabulary.find({}, function (err, word) {
+   
+        if (err) return handleError(err);
+        
+        query = word;
+       
+    });
+    
+
+    let VocabularyString = query.map((word)=>{
+        return word.VocabularyString;
+    })
+   
+    res.render("index.ejs", {saludo :VocabularyString});
 });
 
 app.post("/addVocabulary", (req, res)=>{
     let newVocabulary = new vocabulary({VocabularyString: req.body.vocabulary});
+    
     newVocabulary.save(function(err){
             if(err) return console.log(err);
-        });
+    });
 
-
-   res.redirect("/");
+ 
+    vocabulary.findOne({}, function (err, test) {
+   
+        if (err) return handleError(err);
+        
+    
+       
+    });
+    
+    
+    res.redirect("/");
+    
 });
+
+
 
 
 
