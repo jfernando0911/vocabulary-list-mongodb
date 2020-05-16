@@ -6,7 +6,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/newTest', { useNewUrlParser: true } );
+mongoose.connect('mongodb://localhost/phraseSaver', { useNewUrlParser: true } );
 
 
 let db = mongoose.connection;
